@@ -20,7 +20,7 @@ const LoginSignupToggle = () => {
                     </div>
                     <div className="overlay-right">
                         <h1>Hello, Friend</h1>
-                        <p className='toggle_form_paragrapn'>Enter your personal details and start journey with us</p>
+                        <p className='toggle_form_paragrapn'>Enter your personal details and start journey with QuadB Tech</p>
                         <button onClick={() => setActiveClass('right-panel-active')} id="signUp" className="overlay_btn button toggle_form_button">Sign Up</button>
                     </div>
                 </div>

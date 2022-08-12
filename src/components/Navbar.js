@@ -24,7 +24,7 @@ const Navbar = () => {
                             <li><a>About</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost normal-case text-xl">MovieList</a>
+                    <a onClick={() => navigate('/')} class="btn btn-ghost normal-case text-xl">MovieApp</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal p-0">

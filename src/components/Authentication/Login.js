@@ -14,7 +14,6 @@ const Login = () => {
         , , error,
     ] = useSignInWithEmailAndPassword(auth);
     const user = useAuthState(auth);
-    // console.log(user[0]);
     const navigate = useNavigate();
 
     useEffect(() => {

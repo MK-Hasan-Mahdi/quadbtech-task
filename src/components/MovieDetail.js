@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate, useParams } from 'react-router-dom';
 import Popup from 'reactjs-popup';
+import toast from 'react-hot-toast';
 import auth from '../firebase.init';
 import Navbar from './Navbar';
 import Spinner from './Spinner/Spinner';
@@ -15,6 +16,7 @@ const MovieDetail = () => {
     const user = useAuthState(auth)
     const handleUser = () => {
         localStorage.setItem("user", JSON.stringify({ user, movie: mainData }));
+        toast.success('Successfully Purchased.');
     }
 
     useEffect(() => {

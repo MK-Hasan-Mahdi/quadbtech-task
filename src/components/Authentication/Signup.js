@@ -20,7 +20,7 @@ const Signup = () => {
     }
     return (
         <div className="sign-up-container">
-            <form onSubmit={handleSubmit(onSubmitParam)}>
+            <form className='toggle_form' onSubmit={handleSubmit(onSubmitParam)}>
                 <h1>Create Account</h1>
                 <div className="social-links">
                     <div>
@@ -33,7 +33,7 @@ const Signup = () => {
                         <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <span>or use your email for registration</span>
+                <span className='toggle_form_span'>or use your email for registration</span>
                 <input type="text" placeholder="Name"
                     {...register("name", {
                         required: true,
@@ -79,7 +79,7 @@ const Signup = () => {
                 <small className='text-[#FF4B2B] custom_font_size'>{errors?.password?.message}</small>
 
 
-                <button type="submit" className="form_btn">Sign Up</button>
+                <button type="submit" className="form_btn toggle_form_button ">Sign Up</button>
             </form>
         </div>
     );

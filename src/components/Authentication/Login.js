@@ -41,7 +41,7 @@ const Login = () => {
     }
     return (
         <div className="sign-in-container">
-            <form onSubmit={handleSubmit(onSubmitParam)}>
+            <form className='toggle_form' onSubmit={handleSubmit(onSubmitParam)}>
                 <h1>Sign In</h1>
                 <div className="social-links">
                     <div>
@@ -54,7 +54,7 @@ const Login = () => {
                         <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <span>or use your account</span>
+                <span className='toggle_form_span'>or use your account</span>
                 <input type="email" placeholder="Email"
                     {...register("email", {
                         required: 'Email is required',
@@ -83,7 +83,7 @@ const Login = () => {
                 />
                 <small className='text-[#FF4B2B] custom_font_size'>{errors?.password?.message}</small>
 
-                <button type='submit' className="form_btn">Sign In</button>
+                <button type='submit' className="form_btn toggle_form_button ">Sign In</button>
             </form>
         </div>
     );

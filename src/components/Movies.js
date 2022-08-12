@@ -5,7 +5,7 @@ import Movie from './Movie';
 
 const Movies = () => {
     const [movies, setMovies] = useState([]);
-    console.log(movies);
+    // console.log(movies);
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 
@@ -24,34 +24,35 @@ const Movies = () => {
         navigate(`/${id}`);
     }
     return (
-        <div className='bg-[#bcc0c9]'>
-            <div className="overflow-x-auto container mx-auto pb-20">
-                <h1 className='text-center bg-white text-shadow text-2xl md:text-4xl mt-8 mb-5 px-2 md:px-0'>All Information</h1>
-                {
-                    loading ? <Spinner /> :
-                        <table className="table w-full">
-                            {/* <!-- head --> */}
-                            <thead>
-                                <tr>
-                                    <th className='col-span-1'>Serial</th>
-                                    <th>Thumbnail</th>
-                                    <th>Name</th>
-                                    <th>Language</th>
-                                    <th>Ratings</th>
-                                    <th>Premiered</th>
-                                    <th className='text-center'>Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+        <div className='mid-container'>
+            <div className='bg-gray mt-12'>
+                <div className="overflow-x-auto container mx-auto pb-20">
+                    <h1 className='text-center bg-white text-shadow text-2xl md:text-4xl mt-8 mb-10 px-2 md:px-0 font-bold'>All Information</h1>
+                    {
+                        loading ? <Spinner /> :
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full">
+                                    <thead>
+                                        <tr>
+                                            <th className='py-5'>Serial</th>
+                                            <th>Thumbnail</th>
+                                            <th>Name</th>
+                                            <th>Language</th>
+                                            <th>Ratings</th>
+                                            <th>Premiered</th>
+                                            <th className='text-center'>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            movies?.map((movie, index) => <Movie handleUserClick={handleUserClick} movie={movie} key={index} serial={index} />)
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
 
-
-                                {
-                                    movies?.map((movie, index) => <Movie handleUserClick={handleUserClick} movie={movie} key={index} serial={index} />)
-                                }
-
-                            </tbody>
-                        </table>
-                }
+                    }
+                </div>
             </div>
         </div>
     );

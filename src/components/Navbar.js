@@ -13,7 +13,7 @@ const Navbar = () => {
     const navigate = useNavigate();
     return (
         <div className='mid-container'>
-            <div class="navbar bg-base-100">
+            <div class="navbar bg-base-100 ">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -24,7 +24,7 @@ const Navbar = () => {
                             <li><a>About</a></li>
                         </ul>
                     </div>
-                    <a onClick={() => navigate('/')} class="btn btn-ghost normal-case text-xl">MovieApp</a>
+                    <a onClick={() => navigate('/')} class="btn btn-ghost normal-case text-xl font-bold">MovieApp</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal p-0">

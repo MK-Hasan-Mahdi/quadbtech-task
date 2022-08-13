@@ -52,6 +52,7 @@ const MovieDetail = () => {
                                 <p><span className='text-xl font-bold'>Language: </span> {mainData?.language}</p>
                                 <p><span className='text-xl font-bold'>Country: </span> {mainData?.network?.country?.name}</p>
                                 <p><span className='text-xl font-bold'>Network: </span> {mainData?.network?.name}</p>
+                                <p><span className='text-xl font-bold'>Timezone: </span> {mainData?.network?.country?.timezone}</p>
                                 <p> <span className='text-xl font-bold'>Movie Link: </span> {mainData?.url}</p>
                                 <p><span className='text-xl font-bold'>Summary: </span> {mainData?.summary}</p>
                                 <Popup trigger={<button className="btn bg-[#212121] button-shadow hover:bg-transparent hover:text-[#212121]  text-white">Booking Movie</button>} position="top center">

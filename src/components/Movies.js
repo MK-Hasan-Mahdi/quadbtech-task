@@ -38,6 +38,7 @@ const Movies = () => {
                                             <th>Thumbnail</th>
                                             <th>Name</th>
                                             <th>Language</th>
+                                            <th>Genres</th>
                                             <th>Ratings</th>
                                             <th>Premiered</th>
                                             <th className='text-center'>Time</th>

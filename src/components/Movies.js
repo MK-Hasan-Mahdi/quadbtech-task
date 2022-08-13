@@ -27,7 +27,7 @@ const Movies = () => {
         <div className='mid-container'>
             <div className='bg-gray mt-12'>
                 <div className="overflow-x-auto container mx-auto pb-20">
-                    <h1 className='text-center bg-white text-shadow text-2xl md:text-4xl mt-8 mb-10 px-2 md:px-0 font-bold'>All Information</h1>
+                    <h1 className='text-center bg-white text-shadow text-2xl md:text-4xl mt-8 mb-10 px-2 md:px-0 font-bold'>All Movies</h1>
                     {
                         loading ? <Spinner /> :
                             <div class="overflow-x-auto">
